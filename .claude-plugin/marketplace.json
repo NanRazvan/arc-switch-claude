@@ -1,0 +1,16 @@
+{
+  "name": "arc-switch",
+  "owner": {
+    "name": "ARC Switch"
+  },
+  "metadata": {
+    "description": "Pluginurile echipei ARC Switch pentru Claude."
+  },
+  "plugins": [
+    {
+      "name": "arc-switch",
+      "source": "./plugins/arc-switch",
+      "description": "Planul sau schema clientului → proiect cu produse ARC → fișa pentru client."
+    }
+  ]
+}
