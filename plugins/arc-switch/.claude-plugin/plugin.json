@@ -1,6 +1,6 @@
 {
   "name": "arc-switch",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Pentru echipa ARC: transformă planul sau schema unui client în proiect cu produse ARC și fișa pentru client.",
   "author": {
     "name": "ARC Switch"
