@@ -24,11 +24,12 @@ Panou › Sistem › Utilizatori › contul folosit de Claude (recomandat unul s
 **editor**) › bifează **Enable API Key** › copiază cheia › Save. Debifat = cheia nu mai merge nicăieri.
 
 ### 2. Conectorul ARC (în aplicația Claude)
-Settings › Connectors › **Add custom connector** (la Team: administratorul, din Organization settings):
-- URL: `https://<adresa site-ului>/api/mcp`
-- Request headers: `Authorization` = `Bearer <cheia de la pasul 1>`
-- cât timp site-ul e protejat de Vercel (până la lansare), încă un antet: `x-vercel-protection-bypass` = secretul din
-  Vercel › Project › Settings › Deployment Protection › Protection Bypass for Automation.
+https://claude.ai/settings/connectors › **Add custom connector** (la Team: administratorul, din Organization settings):
+- URL: `https://<adresa site-ului>/api/mcp`; cât timp site-ul e protejat de Vercel (până la lansare), adaugă la URL
+  `?x-vercel-protection-bypass=<secret>` (secretul: Vercel › Settings › Deployment Protection › Protection Bypass for
+  Automation). Antetul Vercel nu e acceptat de Claude, parametrul din URL da.
+- Request headers: **`x-api-key`** = `<cheia de la pasul 1>`. (`Authorization` e rezervat de Claude la conectori.)
+- Rezervă, dacă antetul nu merge: cheia în URL, `&key=<cheia>` (poate apărea în jurnalele Vercel).
 
 ### 3. Skill-ul (pluginul)
 - **Team**: Organization settings › Plugins & skills › Marketplaces › Add plugins › Sync from GitHub ›
